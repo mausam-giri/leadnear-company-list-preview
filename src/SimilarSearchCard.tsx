@@ -6,7 +6,7 @@ export interface SimilarSearchCardProps {
 export default function SimilarSearchCard(props: SimilarSearchCardProps) {
   return (
     <div>
-      <div className="px-4 py-4 md:border md:shadow rounded-md w-fit">
+      <div className="px-4 py-4 md:border md:shadow-md rounded-md w-fit">
         <h2 className="font-medium text-lg">Explore Similar Searches</h2>
         <div className="mt-3">
           <div className="space-y-2">
