@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 import CompanyCard, { CompanyCardProps } from "./CompanyCard";
 import SimilarSearchCard, { SearchSuggestionProps } from "./SimilarSearchCard";
@@ -50,13 +51,36 @@ function App() {
       text: "List Of Top BPO Companies In India",
     },
   ];
+
+  
+  const [title, _] = useState("IT Services Companies");
+
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+
+    const url = window.location.href; 
+    const title = "IT Services Companies"; 
+    const summary = ""; 
+
+    window.open(
+      shareLinkedin({ url, title, summary }),
+      '_blank',
+      'width=750,height=599,location=no,menubar=no,scrollbars=no,status=no,toolbar=no'
+    );
+
+    return false;
+}
+
+const shareLinkedin = ({ url, title, summary }: { url: string, title: string, summary: string }) => {
+    return encodeURI(`https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}&summary=${summary}&source=LinkedIn`);
+};
+
   return (
     <>
       <div>
         <div className="mt-4">
           <div className="">
-            
-          <section className="wrapper mt-[55px] md:mt-[85px] border shadow-md bg-[url('./assets/bg_header.png')] overflow-hidden rounded-md">
+            <section className="wrapper mt-[55px] md:mt-[85px] border shadow-md bg-[url('./assets/bg_header.png')] overflow-hidden rounded-md">
               <div className="mt-12 relative bg-white p-2">
                 <div className="p-2 w-fit absolute border border-blue-200 bg-white rounded shadow -top-[10%] md:-top-1/4 left-2">
                   <img src={CompanyLogo} alt="Company Icon" />
@@ -66,7 +90,7 @@ function App() {
                   <h1 className="text-3xl mb-4">
                     Top&nbsp;
                     <span className="font-semibold">
-                      IT Services Companies&nbsp;
+                      {title}&nbsp;
                     </span>
                     in India
                   </h1>
@@ -105,7 +129,6 @@ function App() {
                 </div>
               </div>
             </div>
-
           </div>
           <div className="wrapper pb-4 border-b">
             <div className="text-sm px-4 mt-4 text-center">
@@ -113,7 +136,7 @@ function App() {
                 SHARE ON LINKEDIN TO DOWNLOAD THIS LIST WITH UPTO 500 COMPANIES
                 FOR FREE
               </p>
-              <button className="mx-auto flex items-center group px-3 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
+              <a href="" onClick={handleClick} className="mx-auto w-fit flex items-center group px-3 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
                 Share on Linkedin
                 <svg
                   stroke="currentColor"
@@ -127,7 +150,7 @@ function App() {
                   <path fill="none" d="M0 0h24v24H0z"></path>
                   <path d="M6 6v2h8.59L5 17.59 6.41 19 16 9.41V18h2V6z"></path>
                 </svg>
-              </button>
+              </a>
             </div>
           </div>
         </div>
