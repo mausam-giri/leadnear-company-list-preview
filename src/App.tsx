@@ -1,53 +1,53 @@
-import './App.css';
-import CompanyCard, { CompanyCardProps } from './CompanyCard';
-import SimilarSearchCard, { SearchSuggestionProps } from './SimilarSearchCard';
-
+import "./App.css";
+import CompanyCard, { CompanyCardProps } from "./CompanyCard";
+import SimilarSearchCard, { SearchSuggestionProps } from "./SimilarSearchCard";
+import CompanyLogo from "./assets/business_img.webp";
 function App() {
   const companyDetails: CompanyCardProps[] = [
     {
-      name: 'Happiest Minds Technologies',
-      industry: 'Information Technology And Services',
-      location: 'Bengaluru, Karnataka',
-      linkCompany: '',
-      noOfEmployee: '1001-5000',
+      name: "Happiest Minds Technologies",
+      industry: "Information Technology And Services",
+      location: "Bengaluru, Karnataka",
+      linkCompany: "",
+      noOfEmployee: "1001-5000",
       description:
-        'Happiest Minds Technologies is a Information Technology And Services company and has headquarters in Bengaluru, Karnataka. Happiest Minds Technologies has 1001-5000 employees. Happiest Minds Technologies was founded in 2011. Happiest Minds Technologies is a privately held company. Happiest Minds Technologies has raised $106M.',
+        "Happiest Minds Technologies is a Information Technology And Services company and has headquarters in Bengaluru, Karnataka. Happiest Minds Technologies has 1001-5000 employees. Happiest Minds Technologies was founded in 2011. Happiest Minds Technologies is a privately held company. Happiest Minds Technologies has raised $106M.",
     },
     {
-      name: 'Celebal Technologies',
-      industry: 'Information Technology And Services',
-      location: 'Jaipur, Rajasthan, India',
-      linkCompany: '',
-      noOfEmployee: 'Jaipur, Rajasthan, India',
+      name: "Celebal Technologies",
+      industry: "Information Technology And Services",
+      location: "Jaipur, Rajasthan, India",
+      linkCompany: "",
+      noOfEmployee: "Jaipur, Rajasthan, India",
       description:
-        'Celebal Technologies is a Information Technology And Services company and has headquarters in Jaipur, Rajasthan, India. Celebal Technologies has 1001-5000 employees. Celebal Technologies specialises in internet of things, artificial intelligence. Celebal Technologies was founded in 2015. Celebal Technologies is a privately held company. Celebal Technologies has raised $31850052.',
+        "Celebal Technologies is a Information Technology And Services company and has headquarters in Jaipur, Rajasthan, India. Celebal Technologies has 1001-5000 employees. Celebal Technologies specialises in internet of things, artificial intelligence. Celebal Technologies was founded in 2015. Celebal Technologies is a privately held company. Celebal Technologies has raised $31850052.",
     },
     {
-      name: 'Walmart India Private Limited',
-      industry: 'Walmart India Private Limited',
-      location: 'Gurgaon, Harayana',
-      linkCompany: '',
-      noOfEmployee: '5001-10000',
+      name: "Walmart India Private Limited",
+      industry: "Walmart India Private Limited",
+      location: "Gurgaon, Harayana",
+      linkCompany: "",
+      noOfEmployee: "5001-10000",
       description:
-        'Walmart India Private Limited is a Information Technology And Services company and has headquarters in Gurgaon, Harayana. Walmart India Private Limited has 5001-10,000 employees. Walmart India Private Limited was founded in 2009. CEO of Walmart India Private Limited is Krish Iyer.',
+        "Walmart India Private Limited is a Information Technology And Services company and has headquarters in Gurgaon, Harayana. Walmart India Private Limited has 5001-10,000 employees. Walmart India Private Limited was founded in 2009. CEO of Walmart India Private Limited is Krish Iyer.",
     },
   ];
   const searchSuggestions: SearchSuggestionProps[] = [
     {
-      link: '',
-      text: 'List Of Lead Generation Companies In India',
+      link: "",
+      text: "List Of Lead Generation Companies In India",
     },
     {
-      link: '',
-      text: 'List Of Digital Marketing Companies In India',
+      link: "",
+      text: "List Of Digital Marketing Companies In India",
     },
     {
-      link: '',
-      text: 'List Of Mobile App Development Companies In India',
+      link: "",
+      text: "List Of Mobile App Development Companies In India",
     },
     {
-      link: '',
-      text: 'List Of Top BPO Companies In India',
+      link: "",
+      text: "List Of Top BPO Companies In India",
     },
   ];
   return (
@@ -55,33 +55,66 @@ function App() {
       <div>
         <div className="mt-4">
           <div className="">
-            <div className="pt-8 wrapper text-blue-800  rounded-md border  shadow-md bg-[url('./assets/bg_header.png')] overflow-hidden ">
-              <div className='bg-white px-4 py-2 pb-6'>
-              <h1 className="text-3xl mb-4">
-                Top <span className="font-semibold">IT Services Companies</span>{' '}
-                in India
-              </h1>
-              <p className="text-sm">
-                Leadnear helps you find the best providers, offering access to
-                key decision-makers' contact details and company information,
-                including founders, CEOs, and department heads, along with
-                headquarters, employee count, and more.
-              </p>
-              <div className="mt-4 text-sm">
-                <span className="font-medium">100 Companies |&nbsp;</span>
-                <span>Updated: {'Aug 09, 2024'}</span>
+            
+          <section className="wrapper mt-[55px] md:mt-[85px] border shadow-md bg-[url('./assets/bg_header.png')] overflow-hidden rounded-md">
+              <div className="mt-12 relative bg-white p-2">
+                <div className="p-2 w-fit absolute border border-blue-200 bg-white rounded shadow -top-[10%] md:-top-1/4 left-2">
+                  <img src={CompanyLogo} alt="Company Icon" />
+                </div>
+
+                <div className="ml-[90px]">
+                  <h1 className="text-3xl mb-4">
+                    Top&nbsp;
+                    <span className="font-semibold">
+                      IT Services Companies&nbsp;
+                    </span>
+                    in India
+                  </h1>
+                  <p className="text-sm">
+                    Leadnear helps you find the best providers, offering access
+                    to key decision-makers' contact details and company
+                    information, including founders, CEOs, and department heads,
+                    along with headquarters, employee count, and more.
+                  </p>
+                  <div className="mt-4 text-sm pb-2">
+                    <span className="font-medium">100 Companies |&nbsp;</span>
+                    <span>Updated: {"Aug 09, 2024"}</span>
+                  </div>
+                </div>
               </div>
+            </section>
+
+            <div className="mt-10">
+              <div className="pt-8 wrapper text-blue-800  rounded-md border  shadow-md bg-[url('./assets/bg_header.png')] overflow-hidden ">
+                <div className="bg-white px-4 py-2 pb-6">
+                  <h1 className="text-3xl mb-4">
+                    Top{" "}
+                    <span className="font-semibold">IT Services Companies</span>{" "}
+                    in India
+                  </h1>
+                  <p className="text-sm">
+                    Leadnear helps you find the best providers, offering access
+                    to key decision-makers' contact details and company
+                    information, including founders, CEOs, and department heads,
+                    along with headquarters, employee count, and more.
+                  </p>
+                  <div className="mt-4 text-sm">
+                    <span className="font-medium">100 Companies |&nbsp;</span>
+                    <span>Updated: {"Aug 09, 2024"}</span>
+                  </div>
+                </div>
               </div>
             </div>
+
           </div>
-          <div className="wrapper">
+          <div className="wrapper pb-4 border-b">
             <div className="text-sm px-4 mt-4 text-center">
               <p className=" capitalise mb-1">
                 SHARE ON LINKEDIN TO DOWNLOAD THIS LIST WITH UPTO 500 COMPANIES
                 FOR FREE
               </p>
               <button className="mx-auto flex items-center group px-3 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
-                Share on Linkedin 
+                Share on Linkedin
                 <svg
                   stroke="currentColor"
                   fill="currentColor"
