@@ -158,7 +158,7 @@ const shareLinkedin = ({ url, title, summary }: { url: string, title: string, su
         <div className="wrapper">
           <div className="flex flex-col md:flex-row gap-4 px-2 sm:px-4 md:px-0">
             <div className="mt-4">
-              <h2 className="text-lg font-medium mb-3">
+              <h2 className="text-xl font-medium mb-3">
                 Best IT Services Provider Companies India | Top IT Consulting
                 Companies
               </h2>
