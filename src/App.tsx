@@ -53,9 +53,10 @@ function App() {
   return (
     <>
       <div>
-        <div className="border-b pb-4">
-          <div className="bg-blue-500">
-            <div className="py-8 px-4 md:px-0 wrapper text-slate-100">
+        <div className="mt-4">
+          <div className="">
+            <div className="pt-8 wrapper text-blue-800  rounded-md border  shadow-md bg-[url('./assets/bg_header.png')] overflow-hidden ">
+              <div className='bg-white px-4 py-2 pb-6'>
               <h1 className="text-3xl mb-4">
                 Top <span className="font-semibold">IT Services Companies</span>{' '}
                 in India
@@ -70,23 +71,36 @@ function App() {
                 <span className="font-medium">100 Companies |&nbsp;</span>
                 <span>Updated: {'Aug 09, 2024'}</span>
               </div>
+              </div>
             </div>
           </div>
           <div className="wrapper">
-            <div className="text-sm px-4 mt-4 text-center space-y-1">
-              <p className=" capitalise">
+            <div className="text-sm px-4 mt-4 text-center">
+              <p className=" capitalise mb-1">
                 SHARE ON LINKEDIN TO DOWNLOAD THIS LIST WITH UPTO 500 COMPANIES
                 FOR FREE
               </p>
-              <button className="px-3 py-2 bg-blue-500 text-white rounded-md">
-                Share on Linkedin
+              <button className="mx-auto flex items-center group px-3 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
+                Share on Linkedin 
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  className="w-0 h-0 inline-block fill-current pl-1 transition-all duration-300 group-hover:w-5 group-hover:h-5"
+                  role="img"
+                  viewBox="0 0 24 24"
+                  strokeWidth="0"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path fill="none" d="M0 0h24v24H0z"></path>
+                  <path d="M6 6v2h8.59L5 17.59 6.41 19 16 9.41V18h2V6z"></path>
+                </svg>
               </button>
             </div>
           </div>
         </div>
 
         <div className="wrapper">
-          <div className="flex flex-col md:flex-row gap-4 px-4 md:px-0">
+          <div className="flex flex-col md:flex-row gap-4 px-2 sm:px-4 md:px-0">
             <div className="mt-4">
               <h2 className="text-lg font-medium mb-3">
                 Best IT Services Provider Companies India | Top IT Consulting

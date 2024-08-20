@@ -33,9 +33,9 @@ function SearchSuggestion(props: SearchSuggestionProps) {
   return (
     <a
       href={props.link || '#'}
-      className="flex gap-1 text-blue-500 underline underline-offset-2"
+      className="flex items-start gap-1 text-blue-800 underline underline-offset-2"
     >
-      <img className="w-4 pt-[2px]" src={searchIcon} alt="search" />
+      <img className="w-4 pt-1.5" src={searchIcon} alt="search" />
       {props.text}
     </a>
   );
