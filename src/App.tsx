@@ -108,7 +108,7 @@ const shareLinkedin = ({ url, title, summary }: { url: string, title: string, su
               </div>
             </section>
 
-            <div className="mt-10">
+            {/* <div className="mt-10">
               <div className="pt-8 wrapper text-blue-800  rounded-md border  shadow-md bg-[url('./assets/bg_header.png')] overflow-hidden ">
                 <div className="bg-white px-4 py-2 pb-6">
                   <h1 className="text-3xl mb-4">
@@ -128,7 +128,7 @@ const shareLinkedin = ({ url, title, summary }: { url: string, title: string, su
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
           <div className="wrapper pb-4 border-b">
             <div className="text-sm px-4 mt-4 text-center">
