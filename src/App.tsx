@@ -87,7 +87,7 @@ function App() {
 
         <div className="wrapper">
           <div className="flex flex-col md:flex-row gap-4 px-4 md:px-0">
-            <div className="order-1 md:order-2 mt-4">
+            <div className="mt-4">
               <h2 className="text-lg font-medium mb-3">
                 Best IT Services Provider Companies India | Top IT Consulting
                 Companies
@@ -110,7 +110,7 @@ function App() {
                 <SocialMediaShare />
               </div>
             </div>
-            <div className="order-2 md:order-1 min-w-[320px] md:mt-14">
+            <div className="min-w-[320px] md:mt-14">
               <SimilarSearchCard suggestions={searchSuggestions} />
             </div>
           </div>
